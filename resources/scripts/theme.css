@@ -1,0 +1,263 @@
+:root {
+    --bg-primary: #0f1117;
+    --bg-secondary: #161b22;
+    --bg-tertiary: #1f2630;
+    --bg-hover: #252f3d;
+
+    --accent: #4cc2ff;
+    --accent-soft: rgba(76, 194, 255, 0.15);
+
+    --text-primary: #f5f7fa;
+    --text-secondary: #9ba7b4;
+
+    --border: rgba(255, 255, 255, 0.06);
+    --shadow: 0 10px 35px rgba(0, 0, 0, 0.45);
+
+    --blur: blur(14px);
+
+    --background-url: url("https://cdn.discordapp.com/attachments/1490314414472167549/1501974530577662063/content.png");
+}
+
+/* =========================
+   GLOBAL
+========================= */
+
+html,
+body,
+#app {
+    background:
+        linear-gradient(rgba(10, 12, 16, 0.82), rgba(10, 12, 16, 0.92)),
+        var(--background-url) center/cover fixed no-repeat !important;
+
+    color: var(--text-primary) !important;
+    overflow: overlay;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Smooth Scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.12);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255,255,255,0.22);
+}
+
+/* =========================
+   GLASS EFFECT
+========================= */
+
+.GreyRowBox-sc-1xo9c6v-0,
+.TitledGreyBox___StyledDiv-sc-gvsoy-0,
+.TitledGreyBox___StyledDiv2-sc-gvsoy-1,
+.TitledGreyBox___StyledDiv3-sc-gvsoy-4,
+.ContentBox___StyledDiv-sc-mjlt6f-2,
+.server-console-style-module__chart_container,
+.server-console-style-module__stat_block,
+.style-module_2Vp6MaXq,
+.Modal___StyledDiv2-sc-9vzni8-3,
+.CreateBackupButton___StyledDiv2-sc-da8bqw-3,
+.EditScheduleModal___StyledDiv2-sc-wh9db9-4,
+.EditScheduleModal___StyledDiv4-sc-wh9db9-6,
+.EditScheduleModal___StyledDiv5-sc-wh9db9-7 {
+    background: rgba(22, 27, 34, 0.72) !important;
+    backdrop-filter: var(--blur);
+    -webkit-backdrop-filter: var(--blur);
+
+    border: 1px solid var(--border);
+    border-radius: 18px !important;
+
+    box-shadow: var(--shadow);
+    transition: all .25s ease;
+}
+
+/* Hover Smooth */
+
+.GreyRowBox-sc-1xo9c6v-0:hover,
+.style-module_2Vp6MaXq:hover,
+.server-console-style-module__stat_block:hover {
+    transform: translateY(-2px);
+    border-color: rgba(76, 194, 255, 0.22);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.SubNavigation-sc-lfuaoi-0 {
+    background: rgba(15, 17, 23, 0.75) !important;
+    backdrop-filter: blur(18px);
+    border-right: 1px solid var(--border);
+}
+
+/* Active Menu */
+
+.style-module_35MPv1CD.active,
+a.style-module_35MPv1CD.active {
+    background: linear-gradient(
+        135deg,
+        rgba(76, 194, 255, 0.18),
+        rgba(76, 194, 255, 0.05)
+    ) !important;
+
+    border: 1px solid rgba(76, 194, 255, 0.25);
+    border-radius: 14px;
+    color: white !important;
+}
+
+/* Hover Menu */
+
+.style-module_35MPv1CD:hover {
+    background: rgba(255,255,255,0.05) !important;
+    border-radius: 14px;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input,
+textarea,
+select,
+.Input-sc-19rce1w-0,
+.Input__Textarea-sc-19rce1w-1,
+.Select-sc-17exaqp-0 {
+    background: rgba(255,255,255,0.04) !important;
+    border: 1px solid rgba(255,255,255,0.08) !important;
+
+    color: white !important;
+    border-radius: 14px !important;
+
+    transition: all .2s ease;
+}
+
+/* Focus */
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent) !important;
+    box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+button,
+.style-module_4LBM1DKx,
+.style-module_1WqkLT9X {
+    background: linear-gradient(
+        135deg,
+        rgba(76,194,255,0.18),
+        rgba(76,194,255,0.08)
+    ) !important;
+
+    border: 1px solid rgba(76,194,255,0.22);
+    border-radius: 14px !important;
+
+    color: white !important;
+    transition: all .25s ease;
+}
+
+button:hover,
+.style-module_4LBM1DKx:hover,
+.style-module_1WqkLT9X:hover {
+    transform: translateY(-1px);
+    background: linear-gradient(
+        135deg,
+        rgba(76,194,255,0.28),
+        rgba(76,194,255,0.14)
+    ) !important;
+}
+
+/* =========================
+   SERVER STATUS
+========================= */
+
+.ServerRow__StatusIndicatorBox-sc-1ibsw91-2 {
+    background: rgba(22,27,34,0.72) !important;
+    border-radius: 18px !important;
+    border: 1px solid var(--border);
+    transition: all .25s ease;
+}
+
+.ServerRow__StatusIndicatorBox-sc-1ibsw91-2:hover {
+    border-color: rgba(76,194,255,0.22);
+    transform: scale(1.01);
+}
+
+/* =========================
+   TABLES / LISTS
+========================= */
+
+.group,
+.grid.grid-cols-10,
+.DatabaseRow___StyledGreyRowBox-sc-1t67zwr-13,
+.ScheduleContainer___StyledGreyRowBox-sc-dlqnx9-2,
+.UserRow___StyledGreyRowBox-sc-hg2wjz-0 {
+    background: rgba(22,27,34,0.55) !important;
+    border-radius: 14px;
+    transition: all .2s ease;
+}
+
+.group:hover {
+    background: rgba(255,255,255,0.03) !important;
+}
+
+/* =========================
+   CONSOLE
+========================= */
+
+.server-console-style-module__icon {
+    background: rgba(255,255,255,0.06) !important;
+    border-radius: 12px;
+}
+
+/* =========================
+   PERMISSIONS
+========================= */
+
+.PermissionRow__Container-sc-1h899cn-0:hover {
+    background: rgba(76,194,255,0.12) !important;
+    border-radius: 12px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+p,
+span,
+label,
+div {
+    color: var(--text-primary);
+}
+
+small,
+.text-gray-400,
+.text-neutral-400 {
+    color: var(--text-secondary) !important;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+* {
+    transition:
+        background .25s ease,
+        border .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
